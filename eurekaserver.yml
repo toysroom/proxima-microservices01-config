@@ -4,6 +4,9 @@ server:
 eureka:
   instance:
     hostname: localhost
+    lease-expiration-duration-in-seconds: 900  # Aumentiamo il tempo di scadenza delle istanze a 180 secondi
+  server:
+    eviction-interval-timer-in-ms: 600000
   client:
     fetchRegistry: false
     registerWithEureka: false
